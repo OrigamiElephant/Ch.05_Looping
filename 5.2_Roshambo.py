@@ -55,20 +55,14 @@ while i == 1:
         print("Scissors beat Paper. You Lose")
         lose += 1
     i = input("Do you wish to play again? Yes(1) or No(2)")
-    if input == 2:
+    if i == "2":
         i = 0
-print("Ties", tie)
-print("wins", win)
-print("Loses", lose)
-
-
-
-
-
-
-
-
-
-
-
-
+    elif i == "1":
+        i = 1
+    else:
+        print("Fine. Don't follow the rules.")
+        i = 0
+else:
+    print("Ties", tie)
+    print("wins", win)
+    print("Loses", lose)
