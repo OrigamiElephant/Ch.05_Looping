@@ -65,4 +65,4 @@ while i == 1:
 else:
     print("Ties", tie)
     print("wins", win)
-    print("Loses", lose)
+    print("Losses", lose)
