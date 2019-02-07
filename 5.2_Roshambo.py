@@ -17,13 +17,15 @@ win = 0
 tie = 0
 lose = 0
 while i == 1:
-    n = input("Rock(1), Paper(2), Or Scissors(3)?")
+    n = input("Rock(1), Paper(2), Scissors(3), or quit(4)?")
     if n == "1":
         p = 1
     elif n == "2":
         p = 2
     elif n == "3":
         p = 3
+    elif n == "4":
+        p = 4
     else:
         print("Please input the number next to your choice")
     cpu = random.randint(1, 3)
@@ -31,6 +33,8 @@ while i == 1:
         print("Rock")
     elif cpu == 2:
         print("paper")
+    elif p == 4:
+        print()
     else:
         print("Scissors")
     if cpu == p:
@@ -54,13 +58,7 @@ while i == 1:
     elif cpu == 3 and p == 2:
         print("Scissors beat Paper. You Lose")
         lose += 1
-    i = input("Do you wish to play again? Yes(1) or No(2)")
-    if i == "2":
-        i = 0
-    elif i == "1":
-        i = 1
-    else:
-        print("Fine. Don't follow the rules.")
+    elif p == 4:
         i = 0
 else:
     print("Ties", tie)
