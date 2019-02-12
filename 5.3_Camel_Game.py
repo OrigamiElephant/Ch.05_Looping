@@ -14,6 +14,8 @@ thirst = 0
 while i == 1:
     if thirst > 4:
         print("You are thirsty")
+    if camel > 5:
+        print("Your camel is tired")
     print("The natives are", miles - natives, "Miles behind you")
     print("What would you like to do?")
     print("A.Drink")
@@ -23,6 +25,7 @@ while i == 1:
     print("E.Status")
     print("Q.Quit")
     x = input("Enter Letter:")
+    o = random.randint(1, 20)
     print()
     if x.upper() == "A": # Canteen chances and numbers
         if canteen > 0:
@@ -96,7 +99,13 @@ while i == 1:
         elif q == 3:
             print("You black out and wake up in a horse drawn cart. A man across from you says,")
             print("Oh. your finally awake")
-    if thirst > 6 or natives >= miles or camel >= 7:
+    if o == 1:
+        print()
+        print("You find an oasis")
+        thirst = 0
+        camel = 0
+        canteen = 3
+    if thirst > 6 or natives >= miles or camel > 8 or miles >= 200:
         i = 0
     print()
 print()
@@ -105,13 +114,13 @@ if miles >= 200:
     print("The only business you see is a camel shop")
 elif thirst > 6:
     print("Your canteen getting tired of not being properly filled or drank out of fills itself with sand.")
-    print("you die of thirst because you didn't love and care for your canteen")
+    print("you die of thirst because you didn't love and care for your canteen.")
 elif natives >= miles:
     print("Instead of eating you the natives poke you with a pointy stick. You're sure you were poisoned.")
-    print("You eventually die from an unknown disease")
+    print("You now have HIV.")
 elif camel >= 7:
-    print("Your camel gets sick of carrying you around and prays to the sky god Zeus")
-    print("You are immediately struck by lightning as your camel is whisked off to olympus")
+    print("Your camel gets sick of carrying you around and prays to the sky god Zeus.")
+    print("You are immediately struck by lightning as your camel is whisked off to olympus.")
 else:
     print("Well how did you get here?")
     print("You lose anyways.")
