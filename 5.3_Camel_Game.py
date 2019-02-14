@@ -12,7 +12,7 @@ miles = 0
 natives = -10
 thirst = 0
 while i == 1:
-    if thirst > 4:
+    if thirst > 3:
         print("You are thirsty")
     if camel > 5:
         print("Your camel is tired")
@@ -25,11 +25,14 @@ while i == 1:
     print("E.Status")
     print("Q.Quit")
     x = input("Enter Letter:")
-    o = random.randint(1, 20)
+    o = random.randint(1, 20)  # random generator for oasis
     print()
-    if x.upper() == "A": # Canteen chances and numbers
+
+    if x.upper() == "A":  # Canteen chances and numbers
+        o = 0
         if canteen > 0:
             canteen -=1
+            thirst = 0
             a = random.randint(1,10)
             if a == 1:
                 print("You drink out of your canteen, tastes like gasoline")
@@ -40,7 +43,7 @@ while i == 1:
             else:
                 print("You drink out of your canteen.")
         elif canteen == 0:
-            print("You drink in refreshing nothingness")
+            print("You drink in refreshing nothingness, it's empty")
 
     elif x.upper() == "B":  # Moderate speed numbers
         b = random.randint(1,10)
@@ -75,6 +78,7 @@ while i == 1:
         print("You moved", miles, "miles total")
 
     elif x.upper() == "D":  # Stopping numbers
+        o = 0
         d = random.randint(1,10)
         natives += random.randint(7, 14)
         camel = 0
@@ -88,7 +92,9 @@ while i == 1:
             print("You stop and rest")
 
     elif x.upper() == "E":  # Status Numbers
-        print()
+        print("Your canteen has", canteen, "drinks left")
+        print("You moved", miles, "miles total")
+        print("Your camel has", 7 - camel, "days left")
 
     elif x.upper() == "Q":  # Quitter
         q = random.randint(1,10)
@@ -105,22 +111,23 @@ while i == 1:
         thirst = 0
         camel = 0
         canteen = 3
-    if thirst > 6 or natives >= miles or camel > 8 or miles >= 200:
+    if thirst > 4 or natives >= miles or camel > 8 or miles >= 200:  # Game ending variables
         i = 0
     print()
+
 print()
 if miles >= 200:
     print("You survived, you made it to a town.")
     print("The only business you see is a camel shop")
-elif thirst > 6:
+elif thirst > 4:
     print("Your canteen getting tired of not being properly filled or drank out of fills itself with sand.")
     print("you die of thirst because you didn't love and care for your canteen.")
 elif natives >= miles:
-    print("Instead of eating you the natives poke you with a pointy stick. You're sure you were poisoned.")
+    print("Instead of eating you the natives poke you with a pointy stick. You don't know what was on it.")
     print("You now have HIV.")
 elif camel >= 7:
     print("Your camel gets sick of carrying you around and prays to the sky god Zeus.")
     print("You are immediately struck by lightning as your camel is whisked off to olympus.")
 else:
-    print("Well how did you get here?")
-    print("You lose anyways.")
+    print("How did you get here?")
+    print("Well, You lose anyways.")
