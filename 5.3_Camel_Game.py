@@ -111,7 +111,7 @@ while i == 1:
         thirst = 0
         camel = 0
         canteen = 3
-    if thirst > 4 or natives >= miles or camel > 8 or miles >= 200:  # Game ending variables
+    if thirst > 4 or natives >= miles or camel > 6 or miles >= 200:  # Game ending variables
         i = 0
     print()
 
@@ -130,9 +130,9 @@ if miles >= 200:
     else:
         print("You make it back to town and you and your camel have a nice cold drink.")
 elif thirst > 4:
-    if canteen >0:
+    if canteen > 0:
         print("You die from dehydration, even though you still had water in your canteen.")
-        print("Your camel drinks the rest of the water from the canteen.")
+        print("Your camel drinks the rest of the water from the canteen to spite you.")
     else:
         ab = random.randint(1, 6)
         if ab == 1:
@@ -143,19 +143,34 @@ elif thirst > 4:
         elif ab == 3:
             print("Your canteen miraculously fills with water, you feverishly drink from the canteen.")
             print("But as you keep drinking you find out it's actually th water from your body filling the canteen.")
-            print("You kep drinking to try and keep it in but te canteen fills up faster than you can drink.")
+            print("You keep drinking to try and keep it in but te canteen fills up faster than you can drink.")
+        else:
+            print("You die of thirst")
 elif natives >= miles:
     ac = random.randint(1, 6)
-    print("Instead of eating you the natives poke you with a pointy stick. You don't know what was on it.")
-    print("You now have HIV.")
-elif camel >= 7:
+    if ac == 1:
+        print("Instead of eating you the natives poke you with a pointy stick. You don't know what was on it.")
+        print("You now have HIV.")
+    elif ac == 2:
+        print("The natives take you back to their village, and worship you like a god.")
+        print("Unfortunately they think you don't need to eat and you starve to death.")
+    elif ac == 3:
+        print("The natives feel bad about your camel, so they pull you off of it and take it with them.")
+        print("Unfortunately this means you are left in the desert without a camel to ride.")
+    else:
+        print("The natives capture you amd you camel and they look famished")
+elif camel >= 6:
     ad = random.randint(1, 6)
     if ad == 1:
         print("Your camel gets sick of carrying you around and prays to the sky god Zeus.")
         print("You are immediately struck by lightning as your camel is whisked off to olympus.")
-    if ad == 2:
+    elif ad == 2:
         print("You here a loud, firm snap in the distance.")
         print("Your camel begins to disintegrate and turn into dust as the particles are swept away by the wind.")
+    elif ad == 3:
+        print("Your camel begins to shake rapidly until it implodes on itself, disappearing from existence")
+    else:
+        print("Your camel becomes too fatigued and dies from being over-worked")
 else:
     print("How did you get here?")
     print("Well, You lose anyways.")

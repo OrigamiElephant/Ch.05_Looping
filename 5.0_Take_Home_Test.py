@@ -1,61 +1,59 @@
 '''
 HONOR CODE: I solemnly promise that while taking this test I will only use PyCharm or the Internet,
-but I will definitely not ask another person except the instructor. Signed: ______________________
+but I will definitely not ask another person except the instructor. Signed: Ezra McCulley
+ 1. Make the following program work.
+   '''
+print("This program takes three numbers and returns the sum.")
+total = 0
+answer = 0
+for i in range(3):
+    x = int(input("Enter a number: "))
+    answer = answer + x
+    total = total + i
+print("The total is:", answer)
+print()
 
-
-1. Write a Python program that will use a FOR loop to print your name
-     10 times, and then the word Done at the end.
- '''  
 
 
 '''
-  2. Write a Python program that will use a FOR loop to print Blue
-     and then White 20 times. (Blue White Blue White Blue White... all on separate lines.
-     Don't use \n.)
-'''
-
-
-'''
-  3. Write a Python program that will use a FOR loop to print the even
+  2. Write a Python program that will use a FOR loop to print the even
      numbers from 2 to 100, inclusive.
 '''
-
-
+x = 2
+for i in range(50):
+    print(x)
+    x += 2
+print()
 
 '''
-  4. Write a Python program that will use a WHILE loop to count from
+  3. Write a program that will use a WHILE loop to count from
      10 down to, and including, 0. Then print the words Blast off! Remember, use
      a WHILE loop, don't use a FOR loop.
 '''
+x = 1
+b = 10
+while x == 1:
+    print(b)
+    b -= 1
+    if b == -1:
+        x = 0
+print("Blast off!")
+print()
+
+'''
+  4. Write a program that prints a random integer from 1 to 10 (inclusive).
+'''
+import random
+x = random.randint(1,10)
+print(x)
+print()
+
+
+
 
 
 '''
-  5. There are three things wrong with this program. List each.
-     
-     print("This program takes three numbers and returns the sum.")
-     total = 0
-
-     for i in range(3):
-         x = input("Enter a number: ")
-         total = total + i
-     print("The total is:", x)
-'''
-
-
-'''
-  6. Write a program that prints a random integer from 1 to 10 (inclusive).
-'''
-
-
-'''
-  7. Write a program that prints a random floating point number somewhere between
-     1 and 10 (inclusive). Do not make the mistake of generating a random number from
-     0 to 10 instead of 1 to 10.
-'''
-
-
-'''
-  8. Write a Python program that will:
+  5. Write a Python program that will:
      
      * Ask the user for seven numbers
      * Print the total sum of the numbers
@@ -64,3 +62,15 @@ but I will definitely not ask another person except the instructor. Signed: ____
      if statements.
       
 '''
+y = 0
+print("Please type seven numbers")
+for i in range(7):
+    x = int(input("Number:"))
+    y += x
+print(y)
+if y > 0:
+    print("=Positive")
+elif y < 0:
+    print("=Negative")
+else:
+    print("=Zero")
