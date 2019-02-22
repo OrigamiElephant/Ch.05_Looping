@@ -11,7 +11,15 @@ canteen = 3
 miles = 0
 natives = -10
 thirst = 0
+oasis = 0
 while i == 1:
+    oasis = random.randint(1,20)
+    if oasis == 1:
+        print("You found an oasis")
+        camel = 0
+        thirst = 0
+        canteen = 3
+        print()
     if thirst > 3:
         print("You are thirsty")
     if camel > 5:
