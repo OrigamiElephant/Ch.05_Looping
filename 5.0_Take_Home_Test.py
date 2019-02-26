@@ -63,14 +63,21 @@ print()
       
 '''
 y = 0
+p = 0
+n = 0
+z = 0
 print("Please type seven numbers")
 for i in range(7):
     x = int(input("Number:"))
     y += x
-print(y)
-if y > 0:
-    print("=Positive")
-elif y < 0:
-    print("=Negative")
-else:
-    print("=Zero")
+    if x > 0:
+        p += 1
+    elif x < 0:
+        n += 1
+    else:
+        z += 1
+print()
+print("Total:",y)
+print("Positives:",p)
+print("Negatives:",n)
+print("Zeros:",z)
